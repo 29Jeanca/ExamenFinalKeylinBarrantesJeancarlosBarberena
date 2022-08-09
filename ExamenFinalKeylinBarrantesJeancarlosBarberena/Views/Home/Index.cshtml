@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Paises>
+@{
+    ViewData["ExamenFinal"] = "Examen Final";
+}
+
+<h1>Lista Países Más Ricos</h1>
+@foreach(var item in Model){
+    <h4><a asp-action="VerNoticia" asp-route-id="@item.ID"></a></h4>
+        <p style="color:brown">Nombre del país:</p> @item.nombrePais
+        <p>Nombre del presidente: @item.presidente</p>
+        <p>Lengua nativa: @item.idioma </p>
+        <p>Nivel de alfabetización: @item.alfabetizacion </p>
+        <p>Continente: @item.continente </p>
+        <p>PIB del país: @item.productoInternoBruto </p>
+        <p>Población total: @item.poblacion </p>
+        <p>Extensión territorial: @item.extensionTerritorial </p>
+
+} 
